@@ -1,0 +1,179 @@
+<div class="body body-giapha default">
+  <div class="header header-giapha">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 text-center">
+          <img
+            src="img/banner-header-left-default.png"
+            alt="Banner Header Left"
+          />
+        </div>
+        <div class="col-6 text-center">
+          <div class="header-banner">
+            <div class="header-banner-inner">
+              <div class="header-banner-image">
+                <img
+                  src="img/banner-header-center-default.png"
+                  alt="Banner Header Center"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 text-center">
+          <img
+            src="img/banner-header-right-default.png"
+            alt="Banner Header Right"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container container-giapha">
+    <div class="phado">
+      <div class="position-relative">
+        <div class="loading text-center" id="loading" style="display: none">
+          <div class="spinner-border text-secondary"></div>
+        </div>
+      </div>
+      <div class="phado-tools container" style="">
+        <div class="phado-tools-inner px-0 pb-3 pt-1">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="form-group col-12 d-flex flex-wrap justify-content-between"
+              >
+                <div class="phado-tools-left">
+                  <div class="d-flex flex-wrap">
+                    <div class="position-relative" style="max-width: 300px">
+                      <div class="search-person">
+                        <input
+                          type="text"
+                          onkeyup="findNodeByFullName(this.value)"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title=""
+                          class="form-control form-control-sm"
+                          name="name"
+                          placeholder="Tìm tên"
+                          data-bs-original-title="Nhập ít nhất 3 ký tự để tìm"
+                          aria-label="Nhập ít nhất 3 ký tự để tìm"
+                          data-listener-added_1ddffa31="true"
+                        />
+                      </div>
+                      <div
+                        class="clear-input"
+                        id="clear-input-full-name"
+                        style="display: none"
+                        onclick="clearInput()"
+                      >
+                        x
+                      </div>
+                      <div id="results-found" class="my-1"></div>
+                    </div>
+                    <div class="position-relative">
+                      <div
+                        class="user-manual text-shadow-w ms-3"
+                        onclick="userManual()"
+                      >
+                        Hướng dẫn
+                      </div>
+                    </div>
+                  </div>
+                  <div class="phado-control-panel mt-3">
+                    <div class="me-1 my-1">
+                      <select class="select-deep">
+                        <option value="">Giới hạn hiển thị</option>
+                        <option value="0">1 thế hệ</option>
+                        <option value="1">2 thế hệ</option>
+                        <option value="2">3 thế hệ</option>
+                      </select>
+                    </div>
+                    <div class="me-1 my-1">
+                      <button class="btn btn-sm btn-relationship">
+                        Quan hệ xưng hô
+                      </button>
+                    </div>
+                    <div class="form-check show-line-node-spouse me-1 my-1">
+                      <input
+                        class="form-check-input ms-0 me-1"
+                        type="checkbox"
+                        value=""
+                        id="showLineNodeSpouse"
+                        data-listener-added_1ddffa31="true"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="showLineNodeSpouse"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-title="Hiển thị đường nối hôn phối đến con (đối với thành viên nhiều hôn phối)"
+                        data-bs-original-title=""
+                        title=""
+                      >
+                        Hiển thị đường nối hôn phối đến con
+                      </label>
+                    </div>
+                    <div class="form-check hidden-node-spouses me-1 my-1">
+                      <input
+                        class="form-check-input ms-0 me-1"
+                        type="checkbox"
+                        value=""
+                        id="hiddenNodeSpouses"
+                      />
+                      <label class="form-check-label" for="hiddenNodeSpouses">
+                        Ẩn hôn phối
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="phado-tools-right my-2 my-lg-0" style="">
+                  <div class="statistic-phado">
+                    <h6 class="title">Thống kê phả đồ</h6>
+                    <div id="statistic-members">
+                      <div class="total-members">
+                        <b>- Tổng:</b> <b>7</b> thành viên (<b>5</b> nam,
+                        <b>2</b> nữ)
+                      </div>
+                    </div>
+                    <div id="max-depth"><b>- Thế hệ: 3</b></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="htree text-center" id="htree" >
+
+      </div>
+      <div class="right_menu" id="dlginfo" style="display: none">
+        <h4 class="rm_title">
+          Bảng thông tin <a class="closeInf" onclick="hideInf()">x</a>
+        </h4>
+        <p class="more_info"><a href="">Xem thông tin chi tiết</a></p>
+        <p class="view_laters"><a href="">Xem đời sau</a></p>
+        <p class="view_root"><a href="">Trở về gốc</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer footer-giapha py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 text-center"></div>
+        <div class="col-lg-6">
+          <div class="heading-title-style-3">
+            <h4 class="text-uppercase">Gia phả</h4>
+          </div>
+          <div class="footer-contact"></div>
+        </div>
+        <div class="col-lg-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container"></div>
+</div>
+<script>
+  var treeId = 1340;
+  var lineStyle = "curve";
+</script>
